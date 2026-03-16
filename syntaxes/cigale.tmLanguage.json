@@ -1,0 +1,140 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Cigale",
+    "scopeName": "source.cig",
+    "fileTypes": ["cig"],
+    "patterns": [
+        { "include": "#comments" },
+        { "include": "#strings" },
+        { "include": "#keywords" },
+        { "include": "#types" },
+        { "include": "#modifiers" },
+        { "include": "#constants" },
+        { "include": "#numbers" },
+        { "include": "#operators" },
+        { "include": "#functions" },
+        { "include": "#variables" }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.double-slash.cigale",
+                    "match": "//.*$"
+                },
+                {
+                    "name": "comment.block.cigale",
+                    "begin": "/\"",
+                    "end": "\"/"
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.double.interpolated.cigale",
+                    "begin": "\\$\"",
+                    "end": "\"",
+                    "patterns": [
+                        {
+                            "name": "punctuation.section.interpolation.cigale",
+                            "begin": "\\{",
+                            "end": "\\}",
+                            "patterns": [
+                                { "include": "$self" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "string.quoted.double.cigale",
+                    "begin": "\"",
+                    "end": "\"",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.cigale",
+                            "match": "\\\\."
+                        }
+                    ]
+                },
+                {
+                    "name": "string.quoted.triple.cigale",
+                    "begin": "\"\"\"",
+                    "end": "\"\"\""
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.cigale",
+                    "match": "\\b(if|else|for|foreach|while|match|break|continue|return)\\b"
+                },
+                {
+                    "name": "keyword.declaration.cigale",
+                    "match": "\\b(func|class|inst|of|import|as|static|typeof)\\b"
+                }
+            ]
+        },
+        "types": {
+            "patterns": [
+                {
+                    "name": "support.type.cigale",
+                    "match": "\\b(int|float|double|str|bool|list|result|file)\\b"
+                }
+            ]
+        },
+        "modifiers": {
+            "patterns": [
+                {
+                    "name": "storage.modifier.cigale",
+                    "match": "\\b(public|private|protected|blank|impl)\\b"
+                }
+            ]
+        },
+        "constants": {
+            "patterns": [
+                {
+                    "name": "constant.language.cigale",
+                    "match": "\\b(true|false|null)\\b"
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.float.cigale",
+                    "match": "\\b[0-9]+\\.[0-9]*[fd]?\\b"
+                },
+                {
+                    "name": "constant.numeric.integer.cigale",
+                    "match": "\\b[0-9]+\\b"
+                }
+            ]
+        },
+        "operators": {
+            "patterns": [
+                {
+                    "name": "keyword.operator.cigale",
+                    "match": "(\\+\\+|--|\\*\\*|\\+=|-=|\\*=|/=|~=|%=|\\^=|&=|\\|=|<<=|>>=|\\*\\*=|==|!=|<=|>=|&&|\\|\\||<<|>>|->|\\?\\?|[+\\-*/%~^&|!<>=])"
+                }
+            ]
+        },
+        "functions": {
+            "patterns": [
+                {
+                    "name": "entity.name.function.cigale",
+                    "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*(?=\\()"
+                }
+            ]
+        },
+        "variables": {
+            "patterns": [
+                {
+                    "name": "variable.other.cigale",
+                    "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+                }
+            ]
+        }
+    }
+}

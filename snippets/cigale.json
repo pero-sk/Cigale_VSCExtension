@@ -1,0 +1,193 @@
+{
+    "Main function": {
+        "prefix": "main",
+        "body": [
+            "func public static main() {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Entry point function"
+    },
+    "Function": {
+        "prefix": "func",
+        "body": [
+            "func ${1:public} ${2:name}<${3:}>(${4:}) -> ${5:void} {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Function declaration"
+    },
+    "Blank function": {
+        "prefix": "funcb",
+        "body": [
+            "func ${1:public} blank ${2:name}<${3:}>(${4:}) -> ${5:void};"
+        ],
+        "description": "Blank function declaration"
+    },
+    "Impl function": {
+        "prefix": "funci",
+        "body": [
+            "func ${1:public} impl ${2:name}<${3:}>(${4:}) -> ${5:void} {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Impl function declaration"
+    },
+    "Class": {
+        "prefix": "class",
+        "body": [
+            "class ${1:name} {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Class declaration"
+    },
+    "Class inst": {
+        "prefix": "classi",
+        "body": [
+            "class inst ${1:name} {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Instantiable class declaration"
+    },
+    "Class of": {
+        "prefix": "classof",
+        "body": [
+            "class of<${1:parent}> ${2:name} {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Inheriting class declaration"
+    },
+    "Enum": {
+        "prefix": "inst",
+        "body": [
+            "inst ${1:name} { ${0} }"
+        ],
+        "description": "Enum declaration"
+    },
+    "If statement": {
+        "prefix": "if",
+        "body": [
+            "if (${1:condition}) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "If statement"
+    },
+    "If else statement": {
+        "prefix": "ife",
+        "body": [
+            "if (${1:condition}) {",
+            "\t$2",
+            "} else {",
+            "\t$0",
+            "}"
+        ],
+        "description": "If else statement"
+    },
+    "For loop": {
+        "prefix": "for",
+        "body": [
+            "for (int ${1:i} = 0, ${1:i} < ${2:10}, ${1:i} += 1) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "For loop"
+    },
+    "Foreach loop": {
+        "prefix": "foreach",
+        "body": [
+            "foreach (${1:item}, ${2:list}) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Foreach loop"
+    },
+    "While loop": {
+        "prefix": "while",
+        "body": [
+            "while (${1:condition}) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "While loop"
+    },
+    "Match statement": {
+        "prefix": "match",
+        "body": [
+            "match (${1:value}) {",
+            "\t${2:pattern} -> {",
+            "\t\t$0",
+            "\t}",
+            "\t_ -> {",
+            "\t}",
+            "}"
+        ],
+        "description": "Match statement"
+    },
+    "Import": {
+        "prefix": "import",
+        "body": [
+            "import ${1:module} { ${0} };"
+        ],
+        "description": "Import statement"
+    },
+    "Import stdl.console": {
+        "prefix": "importconsole",
+        "body": [
+            "import stdl.console { cout, couts, cin };"
+        ],
+        "description": "Import stdl.console"
+    },
+    "Import stdl.err": {
+        "prefix": "importerr",
+        "body": [
+            "import stdl.err { result, Error };",
+            "import stdl.err.funct { ok, err };"
+        ],
+        "description": "Import stdl.err"
+    },
+    "Import stdl.io": {
+        "prefix": "importio",
+        "body": [
+            "import stdl.io { open, perm, file };",
+            "import stdl.err { result };"
+        ],
+        "description": "Import stdl.io"
+    },
+    "Import stdl.json": {
+        "prefix": "importjson",
+        "body": [
+            "import stdl.json { parse, stringify };"
+        ],
+        "description": "Import stdl.json"
+    },
+    "Result check": {
+        "prefix": "resultcheck",
+        "body": [
+            "if (${1:result}.is_err()) {",
+            "\t${2://handle error here}",
+            "\treturn;",
+            "}"
+        ],
+        "description": "Result error check"
+    },
+    "Variable": {
+        "prefix": "var",
+        "body": [
+            "${1:int} ${2:name} = ${0};"
+        ],
+        "description": "Variable declaration"
+    },
+    "Static block": {
+        "prefix": "static",
+        "body": [
+            "static {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Static block"
+    }
+}

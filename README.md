@@ -90,4 +90,4 @@ func public static main() {
 
 ## License
 
-[MIT](LICENSE)
+[MIT](https://raw.githubusercontent.com/pero-sk/Cigale_VSCExtension/refs/heads/main/LICENSE)

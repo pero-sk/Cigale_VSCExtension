@@ -3,6 +3,7 @@
   "displayName": "cigale",
   "description": "Cigale language support for Visual Studio Code",
   "version": "0.0.1",
+  "repository": "https://github.com/pero-sk/Cigale_VSCExtension",
   "engines": {
     "vscode": "^1.110.0"
   },

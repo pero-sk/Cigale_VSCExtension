@@ -19,3 +19,9 @@ All notable changes to the Cigale extension will be documented here.
     - `if`, `ife`, `for`, `foreach`, `while`, `match`
     - `import`, `importconsole`, `importerr`, `importio`
     - `resultcheck`, `var`, `static`
+
+## [0.0.2] - 2026-03-17
+
+### Added
+- Syntax highlighting for `.cig` files
+    - Type: ref\<T>

@@ -10,7 +10,7 @@ Full syntax highlighting for `.cig` files including:
 
 - Keywords (`if`, `else`, `for`, `foreach`, `while`, `match`, `return`, etc.)
 - Declarations (`func`, `class`, `inst`, `of`, `import`, `static`)
-- Types (`int`, `float`, `double`, `str`, `bool`, `list`, `result`)
+- Types (`int`, `float`, `double`, `str`, `bool`, `list`, `result`, `ref`)
 - Access modifiers (`public`, `private`, `protected`, `blank`, `impl`)
 - Constants (`true`, `false`, `null`)
 - Numbers (integers, floats with `f`/`d` suffix)

@@ -80,7 +80,7 @@
             "patterns": [
                 {
                     "name": "support.type.cigale",
-                    "match": "\\b(int|float|double|str|bool|list|result|file)\\b"
+                    "match": "\\b(int|float|double|str|bool|list|result|file|ref)\\b"
                 }
             ]
         },
